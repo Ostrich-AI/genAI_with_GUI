@@ -1,44 +1,37 @@
-# RAG Inference UI
+# genAI_with_GUI
 
-This repository contains a Streamlit-based inference UI for document RAG workflows.
+Public generative AI UI demonstration containing a source archive.
 
-## What it does
+## Start here
 
-- Ingest PDFs from the `dataset/` directory (and optional uploaded PDFs).
-- Build embeddings and index chunks in Qdrant.
-- Ask questions over indexed content using a chat interface.
-- Generate answers with Ollama or OpenAI models.
+| Need | Read |
+|---|---|
+| Setup and operating context | [Handover guide](docs/HANDOVER.md) |
+| Source layout and architecture | [Architecture](docs/ARCHITECTURE.md) |
+| Provisional owner and contribution evidence | [Contributions](docs/CONTRIBUTIONS.md) |
+| Prior detailed guidance | [Preserved README](docs/legacy/README.before-20261115.md) |
 
-## Project structure
+## Source and ownership
 
-- `inference.py` - launcher for the Streamlit app.
-- `dataset/` - source PDFs used for ingestion.
-- `requirements.txt` - Python dependencies.
-- `Dockerfile` - container runtime definition.
+- Default branch reviewed: `main` at `8ec1f27cc86014136bdb99186ec76615f195d239`.
+- Setup/source ref used for this guide: [`8ec1f27cc86014136bdb99186ec76615f195d239`](https://github.com/Ostrich-AI/genAI_with_GUI/tree/8ec1f27cc86014136bdb99186ec76615f195d239).
+- Provisional technical owners: [@KishanSakhiya](https://github.com/KishanSakhiya) / [@rahul-parmar-01](https://github.com/rahul-parmar-01). This is a contribution-based coordination assignment pending confirmation; no GitHub permissions or review rules are changed.
+- Reviewed 4 selected source/document files across default and staging source where available. This is a documentation/source review, not an exhaustive security audit or a deployed-environment verification.
 
-## Setup
+## Getting started
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+Use the toolchain and entry point listed in the reviewed source files below.
 
-## Run locally
+Read the source/release inventory before running a binary or script. If the repository holds an archive, unpack it in an isolated workspace and inspect the contained manifest before installation.
 
-```bash
-python inference.py
-```
+## Working rules
 
-Then open:
+Use synthetic data and approved test access. Keep passwords, tokens and private keys out of the repository and issue discussions. Record source ref, environment and evidence for changes. Before promoting a release, independently verify build, smoke checks, migration, rollback and recovery; this guide does not claim those checks have passed.
 
-- [http://localhost:8501](http://localhost:8501)
+## Existing source guides
 
-## Qdrant
+- [README.md](https://github.com/Ostrich-AI/genAI_with_GUI/blob/8ec1f27cc86014136bdb99186ec76615f195d239/README.md)
 
-The app is designed to use Qdrant for vector storage. Ensure Docker is installed/running if your workflow auto-starts Qdrant in a container.
+## Documentation maintenance
 
-## Notes
-
-- Keep your OpenAI key in environment variables (for example, `OPENAI_API_KEY`) when using OpenAI models.
-- Put PDFs in `dataset/` for default ingestion.
+Update this README and the matching docs when interfaces, dependencies, deployment or support ownership change. Preserve historical evidence and use a reviewed documentation change. Review date: 2026-11-15.
