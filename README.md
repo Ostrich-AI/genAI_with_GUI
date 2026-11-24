@@ -1,37 +1,71 @@
-# genAI_with_GUI
+# Ostrich-AI/genAI_with_GUI
 
-Public generative AI UI demonstration containing a source archive.
+Sample GenAI application with UI packaging. It is a sample workload, not a general application-hosting specification.
 
-## Start here
+## Source baseline
 
-| Need | Read |
-|---|---|
-| Setup and operating context | [Handover guide](docs/HANDOVER.md) |
-| Source layout and architecture | [Architecture](docs/ARCHITECTURE.md) |
-| Provisional owner and contribution evidence | [Contributions](docs/CONTRIBUTIONS.md) |
-| Prior detailed guidance | [Preserved README](docs/legacy/README.before-20261115.md) |
+| Field | Value |
+| --- | --- |
+| Reviewed branch | main |
+| Reviewed SHA | 76b5ef655cdd7489eaa59a7cabde0e067abb281a |
+| GitHub default | main |
+| Source class | Wider platform / sample / tooling |
+| Validation | Source/manifests inspected; application execution not claimed |
 
-## Source and ownership
+The reviewed branch is a concrete coding baseline, not proof of the staging image. Reproduce a deployed issue using its actual image/source manifest. A different default branch may contain older code.
 
-- Default branch reviewed: `main` at `8ec1f27cc86014136bdb99186ec76615f195d239`.
-- Setup/source ref used for this guide: [`8ec1f27cc86014136bdb99186ec76615f195d239`](https://github.com/Ostrich-AI/genAI_with_GUI/tree/8ec1f27cc86014136bdb99186ec76615f195d239).
-- Provisional technical owners: [@KishanSakhiya](https://github.com/KishanSakhiya) / [@rahul-parmar-01](https://github.com/rahul-parmar-01). This is a contribution-based coordination assignment pending confirmation; no GitHub permissions or review rules are changed.
-- Reviewed 4 selected source/document files across default and staging source where available. This is a documentation/source review, not an exhaustive security audit or a deployed-environment verification.
+## Clone the right repository
 
-## Getting started
+```sh
+git clone https://github.com/Ostrich-AI/genAI_with_GUI.git
+cd genAI_with_GUI
+git switch main
+git switch -c feature/your-change
+```
 
-Use the toolchain and entry point listed in the reviewed source files below.
+## Install, run and check
 
-Read the source/release inventory before running a binary or script. If the repository holds an archive, unpack it in an isolated workspace and inspect the contained manifest before installation.
+| Task | Observed command / requirement | Evidence |
+| --- | --- | --- |
+| Orientation | Start at the source files listed below; this repository has no universal application launch command | Reviewed tree inventory |
 
-## Working rules
+Commands are derived from the selected manifests/entrypoints. Configure only isolated local or approved sandbox dependencies before running tests or migrations. A semicolon in a table separates sequential commands; run them separately in your shell.
 
-Use synthetic data and approved test access. Keep passwords, tokens and private keys out of the repository and issue discussions. Record source ref, environment and evidence for changes. Before promoting a release, independently verify build, smoke checks, migration, rollback and recovery; this guide does not claim those checks have passed.
+## Dependencies
 
-## Existing source guides
+- See the package/image manifest and code map; this component may be documentation, infrastructure, UI or a sample rather than a standalone API.
 
-- [README.md](https://github.com/Ostrich-AI/genAI_with_GUI/blob/8ec1f27cc86014136bdb99186ec76615f195d239/README.md)
+## Where to change code
 
-## Documentation maintenance
+## Configuration, tests and issues
 
-Update this README and the matching docs when interfaces, dependencies, deployment or support ownership change. Preserve historical evidence and use a reviewed documentation change. Review date: 2026-11-15.
+Read [CONFIGURATION.md](docs/onboarding/CONFIGURATION.md) before starting the process. Use [MAINTAINERS.md](MAINTAINERS.md) for issue and access routing. Unit/contract/integration are different boundaries; tests listed in package metadata have not been executed by this documentation task.
+
+Before a pull request: run the available checks, add a focused regression, update affected API/data/worker documentation and name any blocked dependency. No shared root credential is required to submit code. Product defects remain engineering issues rather than hidden documentation omissions.
+
+## Provenance
+
+[Selected source tree](https://github.com/Ostrich-AI/genAI_with_GUI/tree/76b5ef655cdd7489eaa59a7cabde0e067abb281a) was inspected on 24 November 2026. Old README clone names and feature claims are not adopted without matching source evidence.
+
+## Contributor navigation
+
+- [Contribution workflow](CONTRIBUTING.md)
+- [Component architecture](docs/onboarding/ARCHITECTURE.md)
+- [Security reporting](SECURITY.md)
+- [Previous README](docs/legacy/README.before-20261124-main.md)
+
+## Concrete sample or installer entry point
+
+The reviewed tree contains `source_code_3.zip`, `run.sh` and `streamlit/`. The launcher expects an extracted backend/frontend layout and environment files; the archive has not been unpacked and validated by this review. Inspect its entries before extraction and follow the launcher requirements. The separate `streamlit/Dockerfile` is a different entry point; do not assume it supplies the launcher backend. A complete reproducible extracted-source quickstart remains an engineering validation task.
+
+- [run.sh](https://github.com/Ostrich-AI/genAI_with_GUI/blob/76b5ef655cdd7489eaa59a7cabde0e067abb281a/run.sh)
+- [streamlit/Dockerfile](https://github.com/Ostrich-AI/genAI_with_GUI/blob/76b5ef655cdd7489eaa59a7cabde0e067abb281a/streamlit/Dockerfile)
+- [streamlit/inference.py](https://github.com/Ostrich-AI/genAI_with_GUI/blob/76b5ef655cdd7489eaa59a7cabde0e067abb281a/streamlit/inference.py)
+- [Existing docs/HANDOVER.md](docs/HANDOVER.md)
+- [Existing docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+
+## Branch and release boundary
+
+This README is installed on `main`. The reviewed implementation branch is `main`; use it for the setup commands above. Source pins identify the pre-documentation code baseline. Documentation updates do not establish the image running at any portal.
+
+This is a public sample/distribution repository. Its existing license and notices govern reuse; no new license is introduced here.
